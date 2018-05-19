@@ -1,0 +1,174 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Fusion\n\n\nThe \nFusion\n library is a dynamic library that simplifies and overhauls the WPILib direct library. \n\n\nIt improves, robot functionality, adds lots of support for NetworkTable entries, hardware support, and allows for hot swapping (using NetworkTables). \n\n\nInstalling\n\n\nGradleRIO...\n\n\nOutline\n\n\nThe libary has four main categories. \nDefault, Hardware, Management and Tools\n\n\nAnything bold is extendable/instanceable below\n\n\nAnything not bold is an internal class that is used by Fusion\n\n\n\n\nDefaults\n\n\nDefaults is where main classes are- for Robot, Commands, and Subsystems.\n\n\n\n\nFusionTimedRobot\n [TimedRobot Class]\n\n\nFusionCommand\n [Command Class]\n\n\nFusionAction\n [CommandGroup Class]\n\n\nFusionSubsystem\n [Subsystem Class]\n\n\nFusionRobotBase\n\n\n\n\n\n\nHardware\n\n\nHardware is used for different sensors that don't have libraries, or need more features\n\n\n\n\nHardwareBlinkin [Its a folder, but also the class created]\n\n\nHardwarePidgey (\nTODO\n: make it based on a Runnable not a Subsystem)\n\n\n\n\n\n\nManagement\n\n\nManagement is where all managed based classes are. These include simplifying exisiting features (like AutoSelector) or etc\n\n\n\n\nController - \nDifferent Types of Controllers, with NT Hotswapping (or at least that's the goal)\n\n\nTypes\n\n\nControllerXbox\n\n\n\n\n\n\nJoystickAnalogButton\n\n\nJoystickButton\n\n\nJoystickPOVButton\n\n\nControllerManager\n\n\n\n\n\n\nDrive - \nCustom Drives based upon CTRE's TalonSRX and VictorSRX\n\n\nDriveFusion\n\n\nDriveDifferential\n\n\n\n\n\n\nAuton\n\n\nAutonAction\n\n\nAutonCommand\n\n\nAutonSelector\n\n\nAutonObject\n**\n\n\nAutonWait\n**\n\n\nAutonCommandManager\n\n\n\n\n\n\n\n\n\n\nTools\n\n\nHere's the tools. We like to fuse them together with the rest of the project\n\n\n\n\nFusedNT\n\n\nFusedRunnable\n\n\nFusedCrashTracker\n\n\n\n\n\n\nLicense\n\n\nMIT\n\n\nAuthors\n\n\nThis Project is developed for Team 2337 - The EngiNERDs\n\n\n\n\nBrendan Fuller\n\n\n\n\nAlso this project could have been done without:\n\n\n\n\nWPILib\n\n\nCheesy Poofs\n\n\nCTRE\n\n\n???\n\n\n\n\nWhy\n\n\n\n\nFusionCommand gets created, gets added to the command manager. Now in theory, each \"command\" can only be used once at a time (unless no require is specified)\n\n\nSubsystem power usage needs to be track. How? I don't really know to be honest. \n\n\nAssign the motor an subsystem.id? (yea that would work, or just have a method to update the speed controllers?)\n\n\n\n\n\n\n\"Stopping\" subsystems?\n\n\nBy where the command gets created from could be  different story (right?)\n\n\n\n\nclass MyCustomLED implements CallbackLED {\n    public void setLED(String color) {\n        RobotMap.led.setColorViaString(color)\n    }\n} \nFusion.getInstance().registerFeedbackLED(MyCustomLED, true, \"MAIN\") //class, default, name",
+            "title": "Home"
+        },
+        {
+            "location": "/#fusion",
+            "text": "The  Fusion  library is a dynamic library that simplifies and overhauls the WPILib direct library.   It improves, robot functionality, adds lots of support for NetworkTable entries, hardware support, and allows for hot swapping (using NetworkTables).",
+            "title": "Fusion"
+        },
+        {
+            "location": "/#installing",
+            "text": "",
+            "title": "Installing"
+        },
+        {
+            "location": "/#gradlerio",
+            "text": "",
+            "title": "GradleRIO..."
+        },
+        {
+            "location": "/#outline",
+            "text": "The libary has four main categories.  Default, Hardware, Management and Tools",
+            "title": "Outline"
+        },
+        {
+            "location": "/#anything-bold-is-extendableinstanceable-below",
+            "text": "",
+            "title": "Anything bold is extendable/instanceable below"
+        },
+        {
+            "location": "/#anything-not-bold-is-an-internal-class-that-is-used-by-fusion",
+            "text": "",
+            "title": "Anything not bold is an internal class that is used by Fusion"
+        },
+        {
+            "location": "/#defaults",
+            "text": "Defaults is where main classes are- for Robot, Commands, and Subsystems.   FusionTimedRobot  [TimedRobot Class]  FusionCommand  [Command Class]  FusionAction  [CommandGroup Class]  FusionSubsystem  [Subsystem Class]  FusionRobotBase",
+            "title": "Defaults"
+        },
+        {
+            "location": "/#hardware",
+            "text": "Hardware is used for different sensors that don't have libraries, or need more features   HardwareBlinkin [Its a folder, but also the class created]  HardwarePidgey ( TODO : make it based on a Runnable not a Subsystem)",
+            "title": "Hardware"
+        },
+        {
+            "location": "/#management",
+            "text": "Management is where all managed based classes are. These include simplifying exisiting features (like AutoSelector) or etc   Controller -  Different Types of Controllers, with NT Hotswapping (or at least that's the goal)  Types  ControllerXbox    JoystickAnalogButton  JoystickButton  JoystickPOVButton  ControllerManager    Drive -  Custom Drives based upon CTRE's TalonSRX and VictorSRX  DriveFusion  DriveDifferential    Auton  AutonAction  AutonCommand  AutonSelector  AutonObject **  AutonWait **  AutonCommandManager",
+            "title": "Management"
+        },
+        {
+            "location": "/#tools",
+            "text": "Here's the tools. We like to fuse them together with the rest of the project   FusedNT  FusedRunnable  FusedCrashTracker",
+            "title": "Tools"
+        },
+        {
+            "location": "/#license",
+            "text": "MIT",
+            "title": "License"
+        },
+        {
+            "location": "/#authors",
+            "text": "This Project is developed for Team 2337 - The EngiNERDs   Brendan Fuller   Also this project could have been done without:   WPILib  Cheesy Poofs  CTRE  ???",
+            "title": "Authors"
+        },
+        {
+            "location": "/#why",
+            "text": "FusionCommand gets created, gets added to the command manager. Now in theory, each \"command\" can only be used once at a time (unless no require is specified)  Subsystem power usage needs to be track. How? I don't really know to be honest.   Assign the motor an subsystem.id? (yea that would work, or just have a method to update the speed controllers?)    \"Stopping\" subsystems?  By where the command gets created from could be  different story (right?)   class MyCustomLED implements CallbackLED {\n    public void setLED(String color) {\n        RobotMap.led.setColorViaString(color)\n    }\n} \nFusion.getInstance().registerFeedbackLED(MyCustomLED, true, \"MAIN\") //class, default, name",
+            "title": "Why"
+        },
+        {
+            "location": "/defaults/FusionTimedRobot/",
+            "text": "FusionTimedRobot\n\n\nFusionTimedRobot is a class that extends the orginal \nTimedRobot\n class. It uses a custom \nFusionRobotBase\n to call the new methods\n\n\nFeatures\n\n\nDuring any initalization state: disabled, teleop, and auton this will run. It will \nnot\n run during robotInit though.\n\n\n@Override\npublic void allInit() {\n    //Do stuff here\n}\n\n\n\n\n\nSometimes the need of updating NetworkTables are needed, so will allPeriodic youn can run something during \nany\n state of the robot. Keep in mind \nrobotPerodic\n is still available  for use, just not recommended.\n\n\n@Override\npublic void allPeriodic() {\n    //Do stuff here\n}\n\n\n\n\n\nExample\n\n\nclass Robot extends FusionTimedRobot {\n    /* Based on Timed Robot*/\n    public void robotInit() {\n        //Normal Robot Init, only gets called once and its NOT a state. Think of it as the constructor of the class.\n    }\n\n    /**\n     * Disabled State\n     */\n    @Override\n    public void disabledInit() {\n\n    }\n    @Override\n    public void disabledPeriodic() {\n        Scheduler.getInstance().run();\n    }\n\n    /**\n     * Autonomous State\n     */\n    @Override\n    public void autonomousInit() {\n\n    }\n    @Override\n    public void autonomousPeriodic() {\n        Scheduler.getInstance().run();\n    }\n\n    /**\n     * Teleop State\n     */\n    @Override\n    public void teleopInit() {\n\n    }\n    @Override\n    public void teleopPeriodic() {\n        Scheduler.getInstance().run();\n    }\n\n    /**\n     * Test State\n     */\n    @Override\n    public void testPeriodic() {\n\n    }\n\n    /**\n     * All States\n     */\n    public void allInit() {\n        //Runs at any point a robot state is init'd (excecpt for robotInit())\n    }\n    public void allPeroidic() { //also you could use robotPeroidic() doesn't really matter\n        //Runs during any state, forever, every 20ms\n    }\n}",
+            "title": "FusionTimedRobot"
+        },
+        {
+            "location": "/defaults/FusionTimedRobot/#fusiontimedrobot",
+            "text": "FusionTimedRobot is a class that extends the orginal  TimedRobot  class. It uses a custom  FusionRobotBase  to call the new methods",
+            "title": "FusionTimedRobot"
+        },
+        {
+            "location": "/defaults/FusionTimedRobot/#features",
+            "text": "During any initalization state: disabled, teleop, and auton this will run. It will  not  run during robotInit though.  @Override\npublic void allInit() {\n    //Do stuff here\n}  Sometimes the need of updating NetworkTables are needed, so will allPeriodic youn can run something during  any  state of the robot. Keep in mind  robotPerodic  is still available  for use, just not recommended.  @Override\npublic void allPeriodic() {\n    //Do stuff here\n}",
+            "title": "Features"
+        },
+        {
+            "location": "/defaults/FusionTimedRobot/#example",
+            "text": "class Robot extends FusionTimedRobot {\n    /* Based on Timed Robot*/\n    public void robotInit() {\n        //Normal Robot Init, only gets called once and its NOT a state. Think of it as the constructor of the class.\n    }\n\n    /**\n     * Disabled State\n     */\n    @Override\n    public void disabledInit() {\n\n    }\n    @Override\n    public void disabledPeriodic() {\n        Scheduler.getInstance().run();\n    }\n\n    /**\n     * Autonomous State\n     */\n    @Override\n    public void autonomousInit() {\n\n    }\n    @Override\n    public void autonomousPeriodic() {\n        Scheduler.getInstance().run();\n    }\n\n    /**\n     * Teleop State\n     */\n    @Override\n    public void teleopInit() {\n\n    }\n    @Override\n    public void teleopPeriodic() {\n        Scheduler.getInstance().run();\n    }\n\n    /**\n     * Test State\n     */\n    @Override\n    public void testPeriodic() {\n\n    }\n\n    /**\n     * All States\n     */\n    public void allInit() {\n        //Runs at any point a robot state is init'd (excecpt for robotInit())\n    }\n    public void allPeroidic() { //also you could use robotPeroidic() doesn't really matter\n        //Runs during any state, forever, every 20ms\n    }\n}",
+            "title": "Example"
+        },
+        {
+            "location": "/defaults/FusionCommand/",
+            "text": "FusionCommand\n\n\nFusionCommand is a NetworkTables loading based command. It offers\n- Loading Command in\n\n\nFeatures\n\n\nExample\n\n\nclass ExampleCommand extends FusionCommand {\n\n    public FusionCommand() {\n\n    }\n}",
+            "title": "FusionCommand"
+        },
+        {
+            "location": "/defaults/FusionCommand/#fusioncommand",
+            "text": "FusionCommand is a NetworkTables loading based command. It offers\n- Loading Command in",
+            "title": "FusionCommand"
+        },
+        {
+            "location": "/defaults/FusionCommand/#features",
+            "text": "",
+            "title": "Features"
+        },
+        {
+            "location": "/defaults/FusionCommand/#example",
+            "text": "class ExampleCommand extends FusionCommand {\n\n    public FusionCommand() {\n\n    }\n}",
+            "title": "Example"
+        },
+        {
+            "location": "/defaults/FusionAction/",
+            "text": "FusionAction\n\n\nFusionAction is a \nCommandGroup\n but adds a new internal wait method. FusionAction is only meant to be used during \nTELEOP\n. For Autonomous look at  \nAuto Action\n\n\nFeatures\n\n\nWith a normal command group you can \naddSequential\n or \naddParallel\n but wait about an \naddWait\n?\n\n\nclass ExampleCommand extends FusionAction {\n    public ExampleCommand() {\n        //Do something\n        this.addWait(10) //Adds wait for 10 seconds (double)\n        //Do something else\n    }\n}\n\n\n\n\nExample\n\n\nclass ExampleCommand extends FusionAction {\n    public ExampleCommand() {\n        this.addSequential(new ResetPressure()) //Reset Claw Pressure \n        this.addWait(1) //Wait a second\n        this.addSequential(new OpenClaw()) //Now lets open the claw to new pressure\n    }\n}",
+            "title": "FusionAction"
+        },
+        {
+            "location": "/defaults/FusionAction/#fusionaction",
+            "text": "FusionAction is a  CommandGroup  but adds a new internal wait method. FusionAction is only meant to be used during  TELEOP . For Autonomous look at   Auto Action",
+            "title": "FusionAction"
+        },
+        {
+            "location": "/defaults/FusionAction/#features",
+            "text": "With a normal command group you can  addSequential  or  addParallel  but wait about an  addWait ?  class ExampleCommand extends FusionAction {\n    public ExampleCommand() {\n        //Do something\n        this.addWait(10) //Adds wait for 10 seconds (double)\n        //Do something else\n    }\n}",
+            "title": "Features"
+        },
+        {
+            "location": "/defaults/FusionAction/#example",
+            "text": "class ExampleCommand extends FusionAction {\n    public ExampleCommand() {\n        this.addSequential(new ResetPressure()) //Reset Claw Pressure \n        this.addWait(1) //Wait a second\n        this.addSequential(new OpenClaw()) //Now lets open the claw to new pressure\n    }\n}",
+            "title": "Example"
+        },
+        {
+            "location": "/defaults/FusionSubsystem/",
+            "text": "FusionTimedRobot\n\n\nFusionTimedRobot is a class that extends the orginal \nTimedRobot\n class. It uses a custom \nFusionRobotBase\n to call the new methods\n\n\nNew Methods\n\n\nDuring any initalization state: disabled, teleop, and auton this will run. It will \nnot\n run during robotInit though.\n\n\n@Override\npublic void allInit() {\n    //Do stuff here\n}\n\n\n\n\n\nSometimes the need of updating NetworkTables are needed, so will allPeriodic youn can run something during \nany\n state of the robot. Keep in mind \nrobotPerodic\n\n\n@Override\npublic void allPeriodic() {\n    //Do stuff here\n}\n\n\n\n\n\nExample\n\n\nclass Robot extends FusionTimedRobot {\n    /* Based on Timed Robot*/\n\n    public void robotInit() {\n        //Normal Robot Init, only gets called once and its NOT a state. Think of it as the constructor of the class.\n    }\n    public void allInit() {\n        //Runs at any point a robot state is init'd (excecpt for robotInit())\n    }\n    public void allPeroidic() {\n        //Runs during any state, forever, every 20ms\n    }\n}",
+            "title": "FusionSubsystem"
+        },
+        {
+            "location": "/defaults/FusionSubsystem/#fusiontimedrobot",
+            "text": "FusionTimedRobot is a class that extends the orginal  TimedRobot  class. It uses a custom  FusionRobotBase  to call the new methods",
+            "title": "FusionTimedRobot"
+        },
+        {
+            "location": "/defaults/FusionSubsystem/#new-methods",
+            "text": "During any initalization state: disabled, teleop, and auton this will run. It will  not  run during robotInit though.  @Override\npublic void allInit() {\n    //Do stuff here\n}  Sometimes the need of updating NetworkTables are needed, so will allPeriodic youn can run something during  any  state of the robot. Keep in mind  robotPerodic  @Override\npublic void allPeriodic() {\n    //Do stuff here\n}",
+            "title": "New Methods"
+        },
+        {
+            "location": "/defaults/FusionSubsystem/#example",
+            "text": "class Robot extends FusionTimedRobot {\n    /* Based on Timed Robot*/\n\n    public void robotInit() {\n        //Normal Robot Init, only gets called once and its NOT a state. Think of it as the constructor of the class.\n    }\n    public void allInit() {\n        //Runs at any point a robot state is init'd (excecpt for robotInit())\n    }\n    public void allPeroidic() {\n        //Runs during any state, forever, every 20ms\n    }\n}",
+            "title": "Example"
+        },
+        {
+            "location": "/management/auton/AutoAction/",
+            "text": "FusionAction\n\n\nFusionTimedRobot is a class that extends the orginal \nTimedRobot\n class. It uses a custom \nFusionRobotBase\n to call the new methods\n\n\nNew Methods\n\n\nDuring any initalization state: disabled, teleop, and auton this will run. It will \nnot\n run during robotInit though.\n\n\n@Override\npublic void allInit() {\n    //Do stuff here\n}\n\n\n\n\n\nSometimes the need of updating NetworkTables are needed, so will allPeriodic youn can run something during \nany\n state of the robot. Keep in mind \nrobotPerodic\n is still available  for use, just not recommended.\n\n\n@Override\npublic void allPeriodic() {\n    //Do stuff here\n}\n\n\n\n\n\nExample\n\n\nclass ExampleCommand extends FusionAction {\n\n}",
+            "title": "AutoAction"
+        },
+        {
+            "location": "/management/auton/AutoAction/#fusionaction",
+            "text": "FusionTimedRobot is a class that extends the orginal  TimedRobot  class. It uses a custom  FusionRobotBase  to call the new methods",
+            "title": "FusionAction"
+        },
+        {
+            "location": "/management/auton/AutoAction/#new-methods",
+            "text": "During any initalization state: disabled, teleop, and auton this will run. It will  not  run during robotInit though.  @Override\npublic void allInit() {\n    //Do stuff here\n}  Sometimes the need of updating NetworkTables are needed, so will allPeriodic youn can run something during  any  state of the robot. Keep in mind  robotPerodic  is still available  for use, just not recommended.  @Override\npublic void allPeriodic() {\n    //Do stuff here\n}",
+            "title": "New Methods"
+        },
+        {
+            "location": "/management/auton/AutoAction/#example",
+            "text": "class ExampleCommand extends FusionAction {\n\n}",
+            "title": "Example"
+        }
+    ]
+}
